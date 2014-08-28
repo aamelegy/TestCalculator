@@ -44,6 +44,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		super.tearDown();
 	}
 
+	//Test adding two integers
 	public void testAddIntegers() {
 		MainActivity.WriteInteger(12);
 		MainActivity.clickAdd();
@@ -52,7 +53,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "24.0");
 	}
-
+	//Test adding two floats
 	public void testAddFloats() {
 		MainActivity.WriteInteger(12);
 		MainActivity.clickPoint();
@@ -65,7 +66,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "24.24");
 	}
-
+	//Test subtraction two floats
 	public void testSubtractionFloats() {
 		MainActivity.WriteInteger(24);
 		MainActivity.clickPoint();
@@ -78,7 +79,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "12.12");
 	}
-
+	//Test subtraction two floats where we will have a negative answer
 	public void testSubtractionFloatsNegativeAnswer() {
 		MainActivity.WriteInteger(12);
 		MainActivity.clickPoint();
@@ -91,7 +92,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "-12.12");
 	}
-
+	//Test Multiplication of two floats
 	public void testMultiplicationFloats() {
 		MainActivity.WriteInteger(155);
 		MainActivity.clickPoint();
@@ -104,7 +105,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "140.6");
 	}
-
+	//Test multiplications of two floats where one of them is negative
 	public void testMultiplicationFloatsNegativeAnswer() {
 		MainActivity.clickMinus();
 		MainActivity.WriteInteger(155);
@@ -119,6 +120,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		Assert.assertEquals(result, "-2248.9502");
 	}
 
+	//Test division of two floats
 	public void testDivisionFloats() {
 		MainActivity.clickMinus();
 		MainActivity.WriteInteger(155);
@@ -132,7 +134,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "-10.696552");
 	}
-
+	//Test division by zero
 	public void testDivisionByZero() {
 		MainActivity.WriteInteger(155);
 		MainActivity.clickDivide();
@@ -142,6 +144,7 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		Assert.assertEquals(result, "Infinity");
 	}
 
+	//Test sin function
 	public void testSin() {
 		MainActivity.WriteInteger(90);
 		MainActivity.clickSin();
@@ -149,21 +152,21 @@ public class TestCalculator extends ActivityInstrumentationTestCase2 {
 		Assert.assertEquals(result, "1.0");
 
 	}
-
+	//Test cos function
 	public void testCos() {
 		MainActivity.WriteInteger(180);
 		MainActivity.clickCos();
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "-1.0");
 	}
-
+	//Test Square function
 	public void testSquare() {
 		MainActivity.WriteInteger(180);
 		MainActivity.clickSquared();
 		String result = MainActivity.getText();
 		Assert.assertEquals(result, "32400.0");
 	}
-
+	//Test root function
 	public void testRoot() {
 		MainActivity.WriteInteger(100);
 		MainActivity.clickRoot();

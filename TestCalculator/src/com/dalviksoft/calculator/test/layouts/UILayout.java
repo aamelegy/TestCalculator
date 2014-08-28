@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.robotium.solo.Solo;
 
+//this is the parent class for any layout in the application
+//in this application we have only one activity
  public class UILayout {
 	
 	public static Solo solo;

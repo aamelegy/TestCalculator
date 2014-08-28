@@ -12,6 +12,7 @@ public class MainActivity extends UILayout {
 		// TODO Auto-generated constructor stub
 	}
 
+	//this function writes an integer using the numpad in the calculator
 	public static void WriteInteger(int n)
 	{
 		String num= Integer.toString(n);
@@ -21,6 +22,7 @@ public class MainActivity extends UILayout {
 			clickDigit(digit);
 		}
 	}
+	//this function writes a single digit
 	public static void clickDigit(char num) {
 		switch (num) {
 		case '0':
@@ -58,85 +60,88 @@ public class MainActivity extends UILayout {
 		}
 	}
 
+	//click add button
 	public static void clickAdd() {
 		solo.clickOnView(solo.getView(R.id.buttonPlus));
 	}
-
+	//click divide button
 	public static void clickDivide() {
 		solo.clickOnView(solo.getView(R.id.buttonDivide));
 	}
 
+	//click minus button
 	public static void clickMinus() {
 		solo.clickOnView(solo.getView(R.id.buttonMinus));
 	}
-
+	//click multiply button
 	public static void clickMultiply() {
 		solo.clickOnView(solo.getView(R.id.buttonMultiply));
 	}
-
+	//click point
 	public static void clickPoint() {
 		solo.clickOnView(solo.getView(R.id.buttonPoint));
 	}
-
+	//click equals button
 	public static void clickEqual() {
 		solo.clickOnView(solo.getView(R.id.buttonEqual));
 	}
-
+	//click exit
 	public static void clickExit() {
 		solo.clickOnView(solo.getView(R.id.buttonExit));
 	}
-
+	//click reset
 	public static void clickReset() {
 		solo.clickOnView(solo.getView(R.id.buttonReset));
 	}
-
+	//click del
 	public static void clickDel() {
 		solo.clickOnView(solo.getView(R.id.button_del));
 	}
-
+	//click tan
 	public static void clickTan() {
 		solo.clickOnView(solo.getView(R.id.button_tan));
 	}
-
+	//click cos
 	public static void clickCos() {
 		solo.clickOnView(solo.getView(R.id.button_cos));
 	}
-
+	//click sin
 	public static void clickSin() {
 		solo.clickOnView(solo.getView(R.id.button_sin));
 	}
-
+	//click oct
 	public static void clickOct() {
 		solo.clickOnView(solo.getView(R.id.button_oct));
 	}
-
+	//click hex
 	public static void clickHex() {
 		solo.clickOnView(solo.getView(R.id.button_hex));
 	}
-
+	//click dec
 	public static void clickDec() {
 		solo.clickOnView(solo.getView(R.id.button_dec));
 	}
-
+	//click bin
 	public static void clickBin() {
 		solo.clickOnView(solo.getView(R.id.button_bin));
 	}
-
+	//click pu
 	public static void clickPi() {
 		solo.clickOnView(solo.getView(R.id.button_pi));
 	}
-
+	//click root
 	public static void clickRoot() {
 		solo.clickOnView(solo.getView(R.id.button_root));
-	}
-
+	}	
+	//click cube
 	public static void clickQube() {
 		solo.clickOnView(solo.getView(R.id.button_qube));
 	}
-
+	//click squared
 	public static void clickSquared() {
 		solo.clickOnView(solo.getView(R.id.button_squared_2));
 	}
+	//get the text in the textbox
 	public static String getText()
 	{
 		TextView t=(TextView) solo.getView(R.id.editText1);
